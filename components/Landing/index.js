@@ -16,7 +16,9 @@ const Landing = () => {
   const router = useRouter();
   return (
     <SimpleGrid
-      p={{ base: 1, md: 4 }}
+      px={6}
+      py={4}
+      alignItems="center"
       columns={{ base: 1, md: 2 }}
       spacing={0}
       _after={{
@@ -81,7 +83,7 @@ const Landing = () => {
           w="full"
           mt={2}
           mb={1}
-          onClick={router.push("/fundraiser")}
+          onClick={() => router.push("/fundraiser")}
         >
           Start a Fundraiser
         </Button>
@@ -102,8 +104,8 @@ const Landing = () => {
           shadow="2xl"
           alt="ethereum logo with violet background color"
           fit="fill"
-          w="full"
-          h="full"
+          w="620px"
+          h="auto"
           bg="gray.100"
           loading="lazy"
         />

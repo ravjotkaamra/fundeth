@@ -6,7 +6,6 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  Checkbox,
   Stack,
   Button,
   IconButton,
@@ -25,7 +24,7 @@ import {
   signInWithGoogle,
 } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 export default function Login() {
@@ -63,10 +62,10 @@ export default function Login() {
         <Stack align={"center"}>
           <Heading fontSize={"4xl"}>Sign in to your account</Heading>
           <Text fontSize={"lg"} color={"gray.400"}>
-            Don{"'"}t have an account{" "}
-            <chakra.span color="cyan.500">
+            Don{"'"}t have an account?{" "}
+            <chakra.span color="brand.300">
               <Link href="/register">
-                <a>signup</a>
+                <a>Sign up</a>
               </Link>
             </chakra.span>
           </Text>
@@ -129,7 +128,7 @@ export default function Login() {
                   align={"start"}
                   justify={"space-between"}
                 >
-                  <Box color="cyan.500">
+                  <Box color="blue.300">
                     <Link href="/reset">
                       <a>Forgot password?</a>
                     </Link>

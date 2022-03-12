@@ -2,12 +2,18 @@ import { Button, Heading } from "@chakra-ui/react";
 import { chakra } from "@chakra-ui/system";
 import { AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 import FormInput from "./FormInput";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Stack, VStack } from "@chakra-ui/layout";
 import { motion } from "framer-motion";
 import { simpleOpacity } from "../../config/animations";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../config/firebase";
+import { useRouter } from "next/router";
 
-const CrowdFundForm = () => {
+const FundRaiser = () => {
+  const [user, loading, error] = useAuthState(auth);
+  const router = useRouter();
+
   // if the user submits the contact us form
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,6 +34,14 @@ const CrowdFundForm = () => {
   const [details, setDetails] = useState("");
 
   const MotionButton = motion(Button);
+
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return <div>loading...</div>;
+    }
+    if (!user) router.push("/login");
+  }, [user, loading, router]);
 
   return (
     <VStack p={2} bgColor="blackAlpha.200" shadow="lg" rounded="sm">
@@ -100,4 +114,4 @@ const CrowdFundForm = () => {
     </VStack>
   );
 };
-export default CrowdFundForm;
+export default FundRaiser;

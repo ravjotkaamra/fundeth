@@ -67,10 +67,10 @@ export default function Login() {
         <Stack align={"center"}>
           <Heading fontSize={"4xl"}>Create a new account</Heading>
           <Text fontSize={"lg"} color={"gray.400"}>
-            Already have an account{" "}
-            <chakra.span color="cyan.500">
+            Already have an account?{" "}
+            <chakra.span color="brand.300">
               <Link href="/login">
-                <a>login</a>
+                <a>Login</a>
               </Link>
             </chakra.span>
           </Text>
@@ -163,7 +163,7 @@ export default function Login() {
                   align={"start"}
                   justify={"space-between"}
                 >
-                  <Box color="cyan.500">
+                  <Box color="blue.300">
                     <Link href="/reset">
                       <a>Forgot password?</a>
                     </Link>
@@ -173,10 +173,10 @@ export default function Login() {
                   <Button
                     rounded="none"
                     type="submit"
-                    bg="#39576A"
+                    bg="brand.600"
                     color="white"
                     _hover={{
-                      bg: "#2F4858",
+                      bg: "brand.700",
                     }}
                   >
                     Sign up

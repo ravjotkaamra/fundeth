@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { ChakraProvider } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 import theme from "../config/theme";
+import Menu from "../components/Menu";
 import FavIconProvider from "../components/Misc/FavIconProvider";
 import "../styles/globals.css";
 
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }) {
     <AnimatePresence exitBeforeEnter>
       <ChakraProvider theme={theme}>
         <FavIconProvider>
+          <Menu />
           <Component {...pageProps} />
         </FavIconProvider>
       </ChakraProvider>
