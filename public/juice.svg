@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 512 512"
+   style="enable-background:new 0 0 512 512;"
+   xml:space="preserve"
+   sodipodi:docname="juice.svg"
+   inkscape:version="1.0.2 (1.0.2+r75+1)"><metadata
+   id="metadata4414"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs4412" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="993"
+   id="namedview4410"
+   showgrid="false"
+   inkscape:zoom="0.79296875"
+   inkscape:cx="78.737346"
+   inkscape:cy="258.19707"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<circle
+   style="fill:#de8787"
+   cx="256"
+   cy="256"
+   r="256"
+   id="circle4359" />
+<path
+   style="fill:#d35f5f"
+   d="M262.553,511.917c120.763-3.034,220.751-89.697,244.229-204.247L312.889,113.778l-135.673,180.95  l5.375,68.155l-10.173,58.901L262.553,511.917z"
+   id="path4361" />
+<path
+   style="fill:#BDF1F4;"
+   d="M272.529,426.667h-89.945c-6.749,0-12.385-5.146-12.995-11.867l-27.367-301.022h170.667  l-27.365,301.022C284.912,421.521,279.276,426.667,272.529,426.667z"
+   id="path4363" />
+<path
+   style="fill:#A6E0E0;"
+   d="M227.843,113.778v312.889h44.685c6.749,0,12.385-5.146,12.995-11.867l27.365-301.022H227.843z"
+   id="path4365" />
+<path
+   style="fill:#71E2EF;"
+   d="M219.798,226.694c-22.866-3.687-45.416-5.477-67.922-6.728l17.711,194.834  c0.61,6.721,6.246,11.867,12.995,11.867h89.945c6.749,0,12.385-5.146,12.995-11.867l16.829-185.11  C275.856,236.125,245.858,231.905,219.798,226.694z"
+   id="path4367" />
+<path
+   style="fill:#38C6D9;"
+   d="M227.843,228.233v198.434h44.685c6.749,0,12.385-5.146,12.995-11.867l16.829-185.11  C278.542,235.472,251.911,232.646,227.843,228.233z"
+   id="path4369" />
+<path
+   style="fill:#6CAF5F;"
+   d="M327.649,290.785c-6.263-6.628-1.646-21.159,10.312-32.458c11.959-11.298,32.99-8.452,32.99-8.452  s1.646,21.159-10.312,32.458C348.682,293.628,333.912,297.413,327.649,290.785z"
+   id="path4371" />
+<path
+   style="fill:#FFEDB5;"
+   d="M326.584,313.208c-0.169,0-0.338-0.012-0.51-0.036c-1.884-0.279-3.184-2.032-2.907-3.915  c3.715-25.122-3.044-41.625-3.113-41.787c-0.736-1.755,0.086-3.774,1.836-4.515c1.76-0.741,3.772,0.078,4.513,1.826  c0.312,0.736,7.602,18.316,3.584,45.489C329.737,311.977,328.264,313.208,326.584,313.208z"
+   id="path4373" />
+<path
+   style="fill:#ff6b39;fill-opacity:1"
+   d="M326.58,409.838c-3.913,0-4.698,1.436-15.329,7.758c-10.631,6.322-15.346,3.879-20.397,2.874  c-31.606-6.291-60.48-85.333-28.444-113.778c32.035-28.444,56.989,0,56.989,0c8.601,6.925,14.464,0,14.464,0s24.854-28.444,56.889,0  c32.035,28.444,3.162,107.487-28.444,113.778c-5.051,1.005-9.766,3.448-20.397-2.874  C331.278,411.276,330.493,409.838,326.58,409.838z"
+   id="path4375" />
+<path
+   style="fill:#cc4522;fill-opacity:1"
+   d="M390.751,306.691c-32.035-28.444-56.889,0-56.889,0s-3.2,3.756-8.33,2.95v100.245  c0.329-0.029,0.672-0.048,1.048-0.048c3.913,0,4.698,1.436,15.329,7.758c10.631,6.322,15.346,3.879,20.397,2.874  C393.912,414.179,422.786,335.136,390.751,306.691z"
+   id="path4377" />
+<g
+   id="g4379">
+</g>
+<g
+   id="g4381">
+</g>
+<g
+   id="g4383">
+</g>
+<g
+   id="g4385">
+</g>
+<g
+   id="g4387">
+</g>
+<g
+   id="g4389">
+</g>
+<g
+   id="g4391">
+</g>
+<g
+   id="g4393">
+</g>
+<g
+   id="g4395">
+</g>
+<g
+   id="g4397">
+</g>
+<g
+   id="g4399">
+</g>
+<g
+   id="g4401">
+</g>
+<g
+   id="g4403">
+</g>
+<g
+   id="g4405">
+</g>
+<g
+   id="g4407">
+</g>
+</svg>
