@@ -1,17 +1,21 @@
 import { Box } from "@chakra-ui/layout";
 import { useBreakpointValue } from "@chakra-ui/media-query";
 import { Button } from "@chakra-ui/react";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import React from "react";
-import Link from "../Link";
+import LogoutBtn from "./LogoutBtn";
 import styles from "./styles.module.css";
 
-const SignupBtn = ({ onMenuItemClick }) => {
+const SignupBtn = ({ onMenuItemClick, user, loading }) => {
   const router = useRouter();
   const menuButtonSize = useBreakpointValue({
     base: "xl",
     md: "sm",
   });
+
+  if (!loading && user) {
+    return <LogoutBtn onMenuItemClick={onMenuItemClick} />;
+  }
 
   const onClick = (e) => {
     onMenuItemClick(e);

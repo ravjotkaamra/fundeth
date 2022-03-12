@@ -13,7 +13,8 @@ import {
 import { HiLogin } from "react-icons/hi";
 import { useState } from "react";
 import { SiMinutemailer } from "react-icons/si";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
+import { sendPasswordReset } from "../../config/firebase";
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ export default function ForgotPassword() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await sendPasswordResetEmail(email);
+    await sendPasswordReset(email);
     setEmail("");
   };
 

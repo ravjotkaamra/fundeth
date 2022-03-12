@@ -16,6 +16,7 @@ const Landing = () => {
   const router = useRouter();
   return (
     <SimpleGrid
+      my={10}
       px={6}
       py={4}
       alignItems="center"
@@ -49,7 +50,7 @@ const Landing = () => {
           colorScheme="blackAlpha"
           rounded="full"
         >
-          Etherium
+          Ethereum
         </Badge>
         <chakra.h1
           mb={6}

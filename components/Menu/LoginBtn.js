@@ -1,16 +1,24 @@
 import { Box } from "@chakra-ui/layout";
 import { useBreakpointValue } from "@chakra-ui/media-query";
-import { Button } from "@chakra-ui/react";
+import { Avatar, Button, Tooltip } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import React from "react";
 import styles from "./styles.module.css";
 
-const LoginBtn = ({ onMenuItemClick }) => {
+const LoginBtn = ({ onMenuItemClick, loading, user }) => {
   const router = useRouter();
   const menuButtonSize = useBreakpointValue({
     base: "xl",
     md: "sm",
   });
+
+  if (!loading && user) {
+    return (
+      <Tooltip label={user.displayName} p={3} mx={2}>
+        <Avatar src={user.photoURL} name={user.name} />
+      </Tooltip>
+    );
+  }
 
   const onClick = (e) => {
     onMenuItemClick(e);

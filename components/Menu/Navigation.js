@@ -6,14 +6,19 @@ import MobileMenu from "./toggle";
 import { mobileBreakpointsMap } from "../../config/theme";
 import { easing, menuAnim } from "../../config/animations";
 import NavItem from "./NavItem";
-import NavButton from "./NavButton";
+import { useAuthState } from "react-firebase-hooks/auth";
 import LoginBtn from "./LoginBtn";
 import SignupBtn from "./SignupBtn";
+import { auth } from "../../config/firebase";
 
 const Navigation = () => {
   const MotionContainer = motion(Container);
   const [isOpen, toggleOpen] = useCycle(false, true);
   const isMobile = useBreakpointValue(mobileBreakpointsMap);
+
+  const [user, loading, error] = useAuthState(auth);
+  console.log('loading', loading)
+  console.log('user', user)
 
   const onMenuItemClick = useCallback(
     (e) => {
@@ -95,8 +100,16 @@ const Navigation = () => {
             text="Contact"
             onMenuItemClick={onMenuItemClick}
           />
-          <LoginBtn onMenuItemClick={onMenuItemClick} />
-          <SignupBtn onMenuItemClick={onMenuItemClick} />
+          <LoginBtn
+            onMenuItemClick={onMenuItemClick}
+            user={user}
+            loading={loading}
+          />
+          <SignupBtn
+            onMenuItemClick={onMenuItemClick}
+            user={user}
+            loading={loading}
+          />
         </Flex>
       </MotionContainer>
     </>

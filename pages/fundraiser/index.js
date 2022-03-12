@@ -1,6 +1,6 @@
 import { Button, Heading } from "@chakra-ui/react";
 import { chakra } from "@chakra-ui/system";
-import { AiOutlineMail, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
 import FormInput from "./FormInput";
 import { useEffect, useState } from "react";
 import { Stack, VStack } from "@chakra-ui/layout";
@@ -9,29 +9,36 @@ import { simpleOpacity } from "../../config/animations";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../config/firebase";
 import { useRouter } from "next/router";
+import { BsCalendar3 } from "react-icons/bs";
+import { HiPencilAlt } from "react-icons/hi";
+
+// import crowdFundingObj from "../../config/crowdfunding";
 
 const FundRaiser = () => {
   const [user, loading, error] = useAuthState(auth);
   const router = useRouter();
 
-  // if the user submits the contact us form
+  const [title, setTitle] = useState("");
+  const [details, setDetails] = useState("");
+  const [deadline, setDeadline] = useState(null);
+  const [amount, setAmount] = useState(null);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    setName("");
-    setEmail("");
-    setMessage("");
-    window.location.href =
-      "mailto:crossfitclub777@gmail.com?subject=" +
-      name +
-      " (" +
-      email +
-      ")" +
-      "&body=" +
-      details;
+    // try {
+    //   crowdFundingObj.mounted();
+    //   crowdFundingObj.methods.setNewProject(title, details, deadline, amount);
+    //   crowdFundingObj.methods.startProject();
+    // } catch (error) {
+    //   console.log("error :>> ", error);
+    // }
+
+    setTitle("");
+    setDetails("");
+    setDeadline(null);
+    setAmount(null);
   };
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [details, setDetails] = useState("");
+  // title, details, deadline(number of days), goal amount
 
   const MotionButton = motion(Button);
 
@@ -46,48 +53,55 @@ const FundRaiser = () => {
   return (
     <VStack p={2} bgColor="blackAlpha.200" shadow="lg" rounded="sm">
       <Heading
-        size="lg"
-        as="h2"
+        size="md"
+        as="h3"
         textAlign="center"
         letterSpacing={1.4}
-        fontFamily="Oswald"
+        mt={20}
+        color="gray.300"
       >
-        Start a Fundraiser
+        Please enter the following details to start a fundraiser
       </Heading>
       <chakra.form
         onSubmit={handleSubmit}
         p={{ base: 3, md: 5 }}
         mt={{ base: 3, lg: 0 }}
-        // action="mailto:crossfitclub777@gmail.com"
-        method="GET"
       >
         <VStack spacing={10}>
           <Stack spacing={4}>
             <FormInput
-              id="name"
-              title="Name"
-              place
-              icon={AiOutlineUser}
+              id="title"
+              title="Title"
+              icon={HiPencilAlt}
               type="text"
-              placeholder="Enter your name"
-              formValue={name}
-              onChange={(e) => setName(e.target.value)}
+              placeholder="Enter the fundraiser title"
+              formValue={title}
+              onChange={(e) => setTitle(e.target.value)}
             />
             <FormInput
-              id="email"
-              title="Email"
+              id="amount"
+              title="Amount"
               icon={AiOutlineMail}
-              type="email"
-              placeholder="Enter your email"
-              formValue={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="number"
+              required
+              placeholder="Amount to be raised (in Matic)"
+              formValue={amount}
+              onChange={(e) => setAmount(e.target.value)}
+            />
+            <FormInput
+              id="deadline"
+              title="Deadline"
+              type="number"
+              required
+              icon={BsCalendar3}
+              placeholder="Number of days to raise the tokens"
+              formValue={deadline}
+              onChange={(e) => setDeadline(e.target.value)}
             />
             <FormInput
               id="details"
               title="Details"
-              // icon={BsPencil}
-              // type="text"
-              placeholder="Enter your details here"
+              placeholder="Enter the description for the fundraiser"
               formValue={details}
               onChange={(e) => setDetails(e.target.value)}
             />
@@ -101,12 +115,12 @@ const FundRaiser = () => {
               borderRadius="0"
               fontWeight="normal"
               fontSize="sm"
-              width="120px"
+              width="fit-content"
               variants={simpleOpacity}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              SEND
+              Create new Fundraiser
             </MotionButton>
           </Stack>
         </VStack>
